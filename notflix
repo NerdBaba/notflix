@@ -5,7 +5,7 @@
 mkdir -p $HOME/.cache/notflix
 
 menu="dmenu -i -l 25"
-baseurl="https://1337x.wtf"
+baseurl="https://www.1337xx.to"
 cachedir="$HOME/.cache/notflix"
 
 if [ -z $1 ]; then
@@ -68,7 +68,7 @@ fullURL="${baseurl}${url}/"
 curl -s $fullURL > $cachedir/tmp.html
 magnet=$(grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" $cachedir/tmp.html | head -n 1) 
 
-webtorrent "$magnet" --mpv
+webtorrent "$magnet" --celluloid
 
 # Simple notification
 notify-send "🎥 Enjoy Watching ☺️ " -i "NONE"
